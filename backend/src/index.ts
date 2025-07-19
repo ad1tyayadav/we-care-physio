@@ -48,6 +48,9 @@ const app = express();
 const PORT = 4000;
 app.use(express.json());
 
+
+app.use(express.static('public')); 
+
 /* ---------- REST ENDPOINTS ---------- */
 app.post('/api/events', (req, res) => {
   const ev: EventPayload = req.body;
